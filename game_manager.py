@@ -102,5 +102,5 @@ class GameManager:
         for line in data.split('\n'):
             if line.strip():
                 name, genre, price, rating, available = line.split('|')
-                game = Game(name, genre, int(price), float(rating), available.lower() == 'true')
+                game = Game(name, genre, price, rating, available.lower() == 'true')
                 self.games.append(game)
