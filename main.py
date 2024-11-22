@@ -37,11 +37,17 @@ def main():
             print(f"\n{BRIGHT_BLUE}Datos exportados: {RESET}{exported_data}")
         elif choice == "6":
             #data = input(f"{CYAN}Ingrese el texto de datos a importar: {RESET}")
-            data = """1|ark|shooter|50|10.0|True 
-            2|alskjd|laskjd|39|10.0|False
-            2|alskjd|laskjd|39|10.0|False
-            3|ARK|shooter|34|4.0|True
-            5|ark|shooter|49|10.0|True"""
+            data = """The Legend of Zelda: Breath of the Wild|Action-Adventure|60|9.8|true
+Red Dead Redemption 2|Action|59|9.7|true
+Minecraft|Sandbox|29|9.5|true
+God of War|Action-RPG|49|9.9|true
+Cyberpunk 2077|RPG|59|7.8|true
+FIFA 23|Sports|69|8.4|false
+Elden Ring|Action-RPG|59|9.6|true
+Animal Crossing: New Horizons|Simulation|55|8.9|true
+Call of Duty: Modern Warfare|FPS|69|8.7|false
+Super Mario Odyssey|Platformer|59|9.7|true
+"""
             game_manager.import_data(data)
         elif choice == "7":
             game_manager.show_statistics()

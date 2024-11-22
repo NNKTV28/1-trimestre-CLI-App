@@ -84,7 +84,7 @@ class GameManager:
         print(f"\n{BRIGHT_WHITE}Nombre: {BRIGHT_CYAN}{game.name}")
         print(f"{BRIGHT_WHITE}Genero: {BRIGHT_CYAN}{game.genre}")
         print(f"{BRIGHT_WHITE}Precio: ${BRIGHT_CYAN}{game.price}")
-        print(f"{BRIGHT_WHITE}Calificacion: {BRIGHT_CYAN}{game.rating:.1f}/10.0")
+        print(f"{BRIGHT_WHITE}Calificacion: {BRIGHT_CYAN}{float(game.rating):.1f}/10.0")
         print(f"{BRIGHT_WHITE}Disponible: {BRIGHT_GREEN if game.available else BRIGHT_RED}{'Sí' if game.available else 'No'}{RESET}")
         
     def _find_game(self, name):
@@ -102,5 +102,5 @@ class GameManager:
         for line in data.split('\n'):
             if line.strip():
                 name, genre, price, rating, available = line.split('|')
-                game = Game(name, genre, price, rating, available.lower() == 'true')
+                game = Game(name, genre, int(price), float(rating), available.lower() == 'true')
                 self.games.append(game)
