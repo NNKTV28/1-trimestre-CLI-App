@@ -68,7 +68,7 @@ The application features a colorful terminal interface for better user experienc
 - Red for error messages
 - Various colors for data display
 
-##Author
+## Author
 - [@NNKtv28](https://github.com/nnktv28)
 
 ## License
