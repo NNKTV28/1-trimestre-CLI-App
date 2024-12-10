@@ -28,14 +28,14 @@ def main():
         if choice == "1":
             game_manager.add_game()
         elif choice == "2":
-            game_id = input(f"{CYAN}Ingrese ID del juego: {RESET}")
-            game_manager.search_game(game_id)
+            game_name = input(f"{CYAN}Ingrese nombre del juego: {RESET}")
+            game_manager.search_game(game_name)
         elif choice == "3":
-            game_id = input(f"{CYAN}Ingrese ID del juego a editar: {RESET}")
-            game_manager.edit_game(game_id)
+            game_name = input(f"{CYAN}Ingrese nombre del juego a editar: {RESET}")
+            game_manager.edit_game(game_name)
         elif choice == "4":
-            game_id = input(f"{RED}Ingrese ID del juego a eliminar: {RESET}")
-            game_manager.delete_game(game_id)
+            game_name = input(f"{RED}Ingrese nombre del juego a eliminar: {RESET}")
+            game_manager.delete_game(game_name)
         elif choice == "5":
             exported_data = game_manager.export_data()
             print(f"\n{BRIGHT_BLUE}Datos exportados: {RESET}{exported_data}")
