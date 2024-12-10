@@ -12,7 +12,7 @@ def display_menu():
     print("6. Importar datos desde texto")
     print("7. Mostrar estadisticas")
     print("8. Mostrar todos los juegos")
-    print(f"9. Salir{RESET}") # RESET de colores
+    print(f"9. Salir{RESET}")
 
 def main():
     game_manager = GameManager()
@@ -45,7 +45,7 @@ Cyberpunk 2077|RPG|59|7.8|true
 FIFA 23|Sports|69|8.4|false
 Elden Ring|Action-RPG|59|9.6|true
 Animal Crossing: New Horizons|Simulation|55|8.9|true
-Call of Duty: Modern Warfare|FPS|69|8.7|false
+Call of Duty: Modern Warfare|FPS|69|8.7|false 
 Super Mario Odyssey|Platformer|59|9.7|true
 """
             game_manager.import_data(data)
