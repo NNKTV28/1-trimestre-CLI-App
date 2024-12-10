@@ -20,11 +20,11 @@ def display_menu():
 
 def main():
     game_manager = GameManager()
-    
+
     while True:
         display_menu()
         choice = input(f"\n{GREEN}Seleccione una opcion (1-9): {RESET}")
-        
+
         if choice == "1":
             game_manager.add_game()
         elif choice == "2":
