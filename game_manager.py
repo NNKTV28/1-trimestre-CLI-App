@@ -101,6 +101,27 @@ class GameManager:
             return
         for line in data.split('\n'):
             if line.strip():
-                name, genre, price, rating, available = line.split('|')
-                game = Game(name, genre, int(price), float(rating), available.lower() == 'true')
-                self.games.append(game)
+                try:
+                    name, genre, price, rating, available = line.split('|')
+                    # Detect price type
+                    try:
+                        price = int(price)
+                    except ValueError:
+                        price = float(price)
+                    
+                    # Detect rating type
+                    rating = float(rating)
+                    
+                    # Detect available type
+                    available = str(available).lower()
+                    if available in ['true', '1', 'yes', 'si']:
+                        available = True
+                    elif available in ['false', '0', 'no']:
+                        available = False
+                    else:
+                        raise ValueError("Invalid boolean value")
+                    
+                    game = Game(name, genre, price, rating, available)
+                    self.games.append(game)
+                except Exception as e:
+                    print(f"\n{BRIGHT_RED}Error al importar línea: {line}\nError: {str(e)}{RESET}")
