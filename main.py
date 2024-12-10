@@ -3,16 +3,20 @@ from colors import BRIGHT_GREEN, CYAN, RESET, BRIGHT_RED, BRIGHT_CYAN, YELLOW, G
 import sys
 
 def display_menu():
-    print(f"\n{BRIGHT_CYAN}=== ADMINISTRADOR DE BIBLIOTECA DE VIDEOJUEGOS (ABV) ==={RESET}")
-    print(f"{YELLOW}1. Agregar nuevo juego")
-    print("2. Buscar juego")
-    print("3. Editar juego")
-    print("4. Eliminar juego")
-    print("5. Exportar datos a texto")
-    print("6. Importar datos desde texto")
-    print("7. Mostrar estadisticas")
-    print("8. Mostrar todos los juegos")
-    print(f"9. Salir{RESET}")
+    print(f"\n{BRIGHT_CYAN}╔══════════════════════════════════════════════════════════════╗")
+    print(f"║      🕹️  ADMINISTRADOR DE BIBLIOTECA DE VIDEOJUEGOS (ABV) 🎮  ║")
+    print(f"╚══════════════════════════════════════════════════════════════╝{RESET}")
+    print(f"{YELLOW}┌──────────────────────────────────────┐")
+    print("│  1. Agregar nuevo juego              │")
+    print("│  2. Buscar juego                     │")
+    print("│  3. Editar juego                     │")
+    print("│  4. Eliminar juego                   │")
+    print("│  5. Exportar datos a texto           │")
+    print("│  6. Importar datos desde texto       │")
+    print("│  7. Mostrar estadisticas             │")
+    print("│  8. Mostrar todos los juegos         │")
+    print(f"│  9. Salir                            │")
+    print(f"└──────────────────────────────────────┘{RESET}")
 
 def main():
     game_manager = GameManager()
